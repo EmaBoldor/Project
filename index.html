@@ -3,108 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formular Personalizat</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Formular Antrenament</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 </head>
-<body>   
-<div class="container">
-    <h1>Formular Personalizat</h1>
-    <form id="custom-form">
-        <!-- Email -->
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <!-- Vârstă -->
-        <div class="form-group">
-            <label for="age">Vârstă:</label>
-            <input type="number" id="age" name="age" required>
-        </div>
-        <!-- Sex -->
-        <div class="form-group">
-            <label for="gender">Sex:</label>
-            <select id="gender" name="gender" required>
-                <option value="" disabled selected>Selectează sexul</option>
-                <option value="M">Masculin</option>
-                <option value="F">Feminin</option>
-                <option value="Altul">Altul</option>
-            </select>
-        </div>
-        <!-- Înălțime (cm) -->
-        <div class="form-group">
-            <label for="height">Înălțime (cm):</label>
-            <input type="number" id="height" name="height" required>
-        </div>
-        <!-- Greutate curentă (kg) -->
-        <div class="form-group">
-            <label for="weight">Greutate curentă (kg):</label>
-            <input type="number" id="weight" name="weight" required>
-        </div>
-        <!-- Tip somatic -->
-        <div class="form-group">
-            <label for="body-type">Tip somatic:</label>
-            <select id="body-type" name="body-type" required>
-                <option value="" disabled selected>Selectează tipul somatic</option>
-                <option value="Ectomorf">Ectomorf</option>
-                <option value="Mesomorf">Mesomorf</option>
-                <option value="Endomorf">Endomorf</option>
-            </select>
-        </div>
-        <!-- Câte zile pe săptămână plănuiești să te antrenezi? -->
-        <div class="form-group">
-            <label for="training-days">Câte zile pe săptămână plănuiești să te antrenezi?</label>
-            <input type="number" id="training-days" name="training-days" required>
-        </div>
-        <!-- De câte ori pe zi îți propui să mergi la antrenament? -->
-        <div class="form-group">
-            <label for="daily-training-frequency">De câte ori pe zi îți propui să mergi la antrenament?</label>
-            <input type="number" id="daily-training-frequency" name="daily-training-frequency" required>
-        </div>
-        <!-- Ai vreo experiență anterioară cu antrenamentele sau cu frecventarea unei săli de fitness? -->
-        <div class="form-group">
-            <label for="experience">Ai vreo experiență anterioară cu antrenamentele sau cu frecventarea unei săli de fitness?</label>
-            <input type="text" id="experience" name="experience" required>
-        </div>
-        <!-- Există vreo afecțiune sau problemă de sănătate pe care ar trebui să o aduci la cunoștința noastră? -->
-        <div class="form-group">
-            <label for="health-issues">Există vreo afecțiune sau problemă de sănătate pe care ar trebui să o aduci la cunoștința noastră?</label>
-            <textarea id="health-issues" name="health-issues" required></textarea>
-        </div>
-        <!-- Obiective -->
-        <div class="form-group">
-            <label>Obiectivele tale prin participarea la antrenamente în sala de fitness
-            </label>
-            <div class="checkbox-group">
-                <label><input type="checkbox" name="objectives" value="Pierdere în greutate"> Pierdere în greutate</label><br>
-                <label><input type="checkbox" name="objectives" value="Creștere musculară"> Creștere musculară</label><br>
-                <label><input type="checkbox" name="objectives" value="Tonifiere și definire musculară"> Tonifiere și definire musculară</label><br>
-                <label><input type="checkbox" name="objectives" value="Îmbunătățirea sănătății cardiovasculare"> Îmbunătățirea sănătății cardiovasculare</label><br>
+<body>
+    <div class="sphere"></div>
+    <div class="sphere"></div>
+    <div class="sphere"></div>
+    <div class="form-container container">
+        <h2 class="text-center">Formular pentru Antrenament</h2>
+        <form id="trainingForm">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
             </div>
-        </div>
-        <!-- În cât timp îți dorești să observi rezultatele dorite? -->
-        <div class="form-group">
-            <label>Cu cât timp îți dorești să observi rezultatele dorite?</label>
-            <select id="desired-results-time" name="desired-results-time" multiple required>
-                <option value="1 lună">1 lună</option>
-                <option value="3 luni">3 luni</option>
-                <option value="6 luni">6 luni</option>
-                <option value="1 an">1 an</option>
-            </select>
-        </div>
-        <!-- Abilități -->
-        <div class="form-group">
-            <label>Care sunt abilitățile pe care îți propui să le îmbunătățești sau să le dobândești?</label>
-            <select id="skills" name="skills" multiple required>
-                <option value="Forță">Forță</option>
-                <option value="Flexibilitate">Flexibilitate</option>
-                <option value="Stamina">Stamina</option>
-                <option value="Coordonare">Coordonare</option>
-            </select>
-        </div>
-        <!-- Buton de trimitere -->
-        <button type="submit">Trimite</button>
-    </form>
-</div>
-<script src="scripts.js"></script>
+            <div class="mb-3">
+                <label for="varsta" class="form-label">Vârstă</label>
+                <input type="number" class="form-control" id="varsta" required>
+            </div>
+            <div class="mb-3">
+                <label for="sex" class="form-label">Sex</label>
+                <select class="form-select" id="sex" required>
+                    <option value="">Selectează</option>
+                    <option value="Masculin">Masculin</option>
+                    <option value="Feminin">Feminin</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="inaltime" class="form-label">Înălțime (cm)</label>
+                <input type="number" class="form-control" id="inaltime" required>
+            </div>
+            <div class="mb-3">
+                <label for="greutate" class="form-label">Greutate curentă (kg)</label>
+                <input type="number" class="form-control" id="greutate" required>
+            </div>
+            <div class="mb-3">
+                <label for="tipSomatic" class="form-label">Tip somatic</label>
+                <select class="form-select" id="tipSomatic" required>
+                    <option value="">Selectează</option>
+                    <option value="Ectomorf">Ectomorf</option>
+                    <option value="Mezomorf">Mezomorf</option>
+                    <option value="Endomorf">Endomorf</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="zileAntrenament" class="form-label">Câte zile pe săptămână plănuiești să te antrenezi?</label>
+                <input type="number" class="form-control" id="zileAntrenament" required>
+            </div>
+            <div class="mb-3">
+                <label for="antrenamenteZi" class="form-label">De câte ori pe zi îți propui să mergi la antrenament?</label>
+                <input type="number" class="form-control" id="antrenamenteZi" required>
+            </div>
+            <div class="mb-3">
+                <label for="experienta" class="form-label">Ai vreo experiență anterioară cu antrenamentele sau cu frecventarea unei săli de fitness?</label>
+                <textarea class="form-control" id="experienta" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="problemeSanatate" class="form-label">Există vreo afecțiune sau problemă de sănătate pe care ar trebui să o aduci la cunoștința noastră?</label>
+                <textarea class="form-control" id="problemeSanatate" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Care sunt obiectivele tale prin participarea la antrenamente în sala de fitness?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Pierderea în greutate" id="obiectiv1">
+                    <label class="form-check-label" for="obiectiv1">Pierderea în greutate</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Creșterea musculară" id="obiectiv2">
+                    <label class="form-check-label" for="obiectiv2">Creșterea musculară</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Tonifiere și definire musculară" id="obiectiv3">
+                    <label class="form-check-label" for="obiectiv3">Tonifiere și definire musculară</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Îmbunătățirea sănătății cardiovasculare" id="obiectiv4">
+                    <label class="form-check-label" for="obiectiv4">Îmbunătățirea sănătății cardiovasculare</label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="timpRezultate" class="form-label">În cât timp îți dorești să observi rezultatele dorite?</label>
+                <input type="text" class="form-control" id="timpRezultate" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Care sunt abilitățile pe care îți propui să le îmbunătățești sau să le dobândești?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Forță" id="abilitate1">
+                    <label class="form-check-label" for="abilitate1">Forță</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Rezistență" id="abilitate2">
+                    <label class="form-check-label" for="abilitate2">Rezistență</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Flexibilitate" id="abilitate3">
+                    <label class="form-check-label" for="abilitate3">Flexibilitate</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Coordonare" id="abilitate4">
+                    <label class="form-check-label" for="abilitate4">Coordonare</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Trimite</button>
+        </form>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

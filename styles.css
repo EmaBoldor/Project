@@ -1,76 +1,62 @@
-/* Stiluri generale */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-}
-
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #007bff; /* culoare albastră vibrantă */
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="number"],
-input[type="email"],
-textarea,
-select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.checkbox-group {
-    margin-top: 5px;
-}
-
-.checkbox-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
+    background: linear-gradient(120deg, #f6d365, #fda085);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #fff;
+}
+.form-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+}
+.form-label {
+    color: #f6d365;
+}
+.btn-primary {
+    background-color: #fda085;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
-
-button:hover {
-    background-color: #0056b3;
+.btn-primary:hover {
+    background-color: #f6d365;
 }
-
-/* Stil pentru buton de trimitere */
-button {
-    background-color: #009688; /* Culoare turcoaz vibrantă */
+.sphere {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    animation: move 20s infinite ease-in-out;
 }
-
-button:hover {
-    background-color: #00796b; /* Culoare turcoaz mai întunecată la hover */
+.sphere:nth-child(1) {
+    width: 200px;
+    height: 200px;
+    top: -100px;
+    left: -100px;
+    animation-duration: 22s;
+}
+.sphere:nth-child(2) {
+    width: 300px;
+    height: 300px;
+    top: -150px;
+    right: -150px;
+    animation-duration: 25s;
+}
+.sphere:nth-child(3) {
+    width: 150px;
+    height: 150px;
+    bottom: -75px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-duration: 18s;
+}
+@keyframes move {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        transform: translateY(50px) translateX(50px);
+    }
 }
