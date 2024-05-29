@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formular Antrenament</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 </head>
@@ -16,15 +17,15 @@
         <h2 class="text-center">Formular pentru Antrenament</h2>
         <form id="trainingForm">
             <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
+                <label for="email" class="form-label"><i class="fas fa-envelope" style="color: #fff;"></i>Email</label>
                 <input type="email" class="form-control" id="email" required>
             </div>
             <div class="mb-3">
-                <label for="varsta" class="form-label">Vârstă</label>
+                <label for="varsta" class="form-label"><i class="fas fa-calendar-alt" style="color: #fff;"></i>Vârstă</label>
                 <input type="number" class="form-control" id="varsta" required>
             </div>
             <div class="mb-3">
-                <label for="sex" class="form-label">Sex</label>
+                <label for="sex" class="form-label"><i class="fas fa-venus-mars" style="color: #fff;"></i>Sex</label>
                 <select class="form-select" id="sex" required>
                     <option value="">Selectează</option>
                     <option value="Masculin">Masculin</option>
@@ -32,15 +33,15 @@
                 </select>
             </div>
             <div class="mb-3">
-                <label for="inaltime" class="form-label">Înălțime (cm)</label>
+                <label for="inaltime" class="form-label"><i class="fas fa-ruler-vertical" style="color: #fff;"></i>Înălțime (cm)</label>
                 <input type="number" class="form-control" id="inaltime" required>
             </div>
             <div class="mb-3">
-                <label for="greutate" class="form-label">Greutate curentă (kg)</label>
+                <label for="greutate" class="form-label"><i class="fas fa-weight" style="color: #fff;"></i>Greutate curentă (kg)</label>
                 <input type="number" class="form-control" id="greutate" required>
             </div>
             <div class="mb-3">
-                <label for="tipSomatic" class="form-label">Tip somatic</label>
+                <label for="tipSomatic" class="form-label"><i class="fas fa-dna" style="color: #fff;"></i>Tip somatic</label>
                 <select class="form-select" id="tipSomatic" required>
                     <option value="">Selectează</option>
                     <option value="Ectomorf">Ectomorf</option>
@@ -49,23 +50,23 @@
                 </select>
             </div>
             <div class="mb-3">
-                <label for="zileAntrenament" class="form-label">Câte zile pe săptămână plănuiești să te antrenezi?</label>
+                <label for="zileAntrenament" class="form-label"><i class="fas fa-calendar-week" style="color: #fff;"></i>Câte zile pe săptămână plănuiești să te antrenezi?</label>
                 <input type="number" class="form-control" id="zileAntrenament" required>
             </div>
             <div class="mb-3">
-                <label for="antrenamenteZi" class="form-label">De câte ori pe zi îți propui să mergi la antrenament?</label>
+                <label for="antrenamenteZi" class="form-label"><i class="fas fa-running" style="color: #fff;"></i>De câte ori pe zi îți propui să mergi la antrenament?</label>
                 <input type="number" class="form-control" id="antrenamenteZi" required>
             </div>
             <div class="mb-3">
-                <label for="experienta" class="form-label">Ai vreo experiență anterioară cu antrenamentele sau cu frecventarea unei săli de fitness?</label>
+                <label for="experienta" class="form-label"><i class="fas fa-dumbbell" style="color: #fff;"></i>Ai vreo experiență anterioară cu antrenamentele sau cu frecventarea unei săli de fitness?</label>
                 <textarea class="form-control" id="experienta" rows="3" required></textarea>
             </div>
             <div class="mb-3">
-                <label for="problemeSanatate" class="form-label">Există vreo afecțiune sau problemă de sănătate pe care ar trebui să o aduci la cunoștința noastră?</label>
+                <label for="problemeSanatate" class="form-label"><i class="fas fa-notes-medical" style="color: #fff;"></i>Există vreo afecțiune sau problemă de sănătate pe care ar trebui să o aduci la cunoștința noastră?</label>
                 <textarea class="form-control" id="problemeSanatate" rows="3" required></textarea>
             </div>
             <div class="mb-3">
-                <label class="form-label">Care sunt obiectivele tale prin participarea la antrenamente în sala de fitness?</label>
+                <label class="form-label"><i class="fas fa-bullseye" style="color: #fff;"></i>Care sunt obiectivele tale prin participarea la antrenamente în sala de fitness?</label>
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="Pierderea în greutate" id="obiectiv1">
                     <label class="form-check-label" for="obiectiv1">Pierderea în greutate</label>
@@ -84,11 +85,11 @@
                 </div>
             </div>
             <div class="mb-3">
-                <label for="timpRezultate" class="form-label">În cât timp îți dorești să observi rezultatele dorite?</label>
+                <label for="timpRezultate" class="form-label"><i class="fas fa-hourglass-half" style="color: #fff;"></i>În cât timp îți dorești să observi rezultatele dorite?</label>
                 <input type="text" class="form-control" id="timpRezultate" required>
             </div>
             <div class="mb-3">
-                <label class="form-label">Care sunt abilitățile pe care îți propui să le îmbunătățești sau să le dobândești?</label>
+                <label class="form-label"><i class="fas fa-brain" style="color: #fff;"></i>Care sunt abilitățile pe care îți propui să le îmbunătățești sau să le dobândești?</label>
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="Forță" id="abilitate1">
                     <label class="form-check-label" for="abilitate1">Forță</label>
